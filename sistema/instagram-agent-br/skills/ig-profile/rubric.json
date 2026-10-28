@@ -1,0 +1,79 @@
+{
+  "version": "1.0-ptbr",
+  "total": 100,
+  "note": "Doze itens. Pontue cada um com honestidade: nota generosa não ajuda ninguém. A maioria dos perfis cai entre 30 e 49 na primeira passada. O peso é proposital: o campo de nome, a primeira linha da bio e os três fixados valem mais que a foto, porque é isso que um desconhecido que chegou por um reel processa antes de decidir seguir.",
+  "items": [
+    {
+      "id": "campo_nome",
+      "points": 12,
+      "full_marks": "O campo de nome (30 caracteres, a linha em negrito, não o @) leva o nome mais o que a pessoa faz em palavras que alguém buscaria: 'Ana Souza | Leilão de imóveis PB'. Esse campo é indexado pela busca do Instagram e a maioria das contas desperdiça com o nome sozinho.",
+      "common_fail": "Só o nome, ou o nome com um emoji."
+    },
+    {
+      "id": "bio_primeira_linha",
+      "points": 12,
+      "full_marks": "A primeira linha diz pra quem é e o que muda pra essa pessoa, nas palavras dela. Não é cargo, não é lista de adjetivos, não são três emojis separados por barra.",
+      "common_fail": "'Empreendedor | Apaixonado por café | Pai de pet'."
+    },
+    {
+      "id": "bio_corpo",
+      "points": 8,
+      "full_marks": "O resto dos 150 caracteres traz uma prova ou uma oferta específica, e se lê como frase, não como lista separada por barras.",
+      "common_fail": "Sopa de palavras-chave, ou espaço em branco."
+    },
+    {
+      "id": "tres_fixados",
+      "points": 10,
+      "full_marks": "Três posts fixados no topo do grid, com três funções diferentes: a melhor prova, a explicação mais clara da oferta e a melhor apresentação da pessoa. Não os três de mais view por acaso.",
+      "common_fail": "Nada fixado, então o topo do grid é o que foi postado por último."
+    },
+    {
+      "id": "link",
+      "points": 8,
+      "full_marks": "Um destino que combina com o que a bio acabou de prometer. No Brasil, muitas vezes esse destino certo é um link direto do WhatsApp (wa.me) com mensagem pronta, ou uma página única. São permitidos até cinco links; mais de dois já é cardápio, e cardápio converte pior que porta.",
+      "common_fail": "Um agregador de links com onze opções, ou nenhum link."
+    },
+    {
+      "id": "destaques",
+      "points": 8,
+      "full_marks": "De quatro a seis destaques com nome das perguntas que um comprador faz: Preços, Resultados, Como funciona, Sobre, Depoimentos. Capas padronizadas. Nada com mais de um ano na frente.",
+      "common_fail": "'Aleatório', 'Vida', 'Favs', ou 14 destaques sem ordem."
+    },
+    {
+      "id": "legibilidade_grid",
+      "points": 8,
+      "full_marks": "As nove primeiras capas são legíveis em miniatura e dizem do que se trata a conta sem nenhum toque. Capas de reel escolhidas de propósito, não o primeiro quadro.",
+      "common_fail": "Nove capas de um rosto no meio de uma palavra, sem texto."
+    },
+    {
+      "id": "foto",
+      "points": 6,
+      "full_marks": "O rosto ocupa uns 60% de um círculo que aparece com uns 40 pixels. Olhos visíveis, foto dos últimos dois anos, fundo que não compete.",
+      "common_fail": "Corpo inteiro, logo numa marca pessoal, ou selfie de braço esticado num lugar escuro."
+    },
+    {
+      "id": "arroba",
+      "points": 6,
+      "full_marks": "Legível, fácil de falar em voz alta e o mesmo das outras redes. Sem underlines empilhados nem números no lugar de letras.",
+      "common_fail": "Um @ que ninguém consegue escrever depois de ouvir uma vez."
+    },
+    {
+      "id": "categoria_contato",
+      "points": 6,
+      "full_marks": "Conta profissional com categoria que bate com a oferta e botões de contato funcionando, incluindo o botão de WhatsApp quando é por lá que a venda fecha. E-mail que alguém lê, não o de 2019.",
+      "common_fail": "Conta pessoal, então não tem insights nem botão de contato."
+    },
+    {
+      "id": "atividade_recente",
+      "points": 10,
+      "full_marks": "Postou nos últimos sete dias e respondeu os comentários do post mais recente. Conta que postou pela última vez em março parece fechada.",
+      "common_fail": "Cinco semanas sem postar, ou uma parede de comentários sem resposta."
+    },
+    {
+      "id": "presenca_stories",
+      "points": 6,
+      "full_marks": "Um story no ar agora, ou pelo menos na maioria dos dias. É a diferença entre um perfil e uma pessoa.",
+      "common_fail": "Nunca tem a bolinha colorida."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "instagram-agent-br",
+  "description": "Treze skills para o Claude operar uma conta de Instagram em português do Brasil: Reels a partir de 26 fórmulas de hook com nota e beat sheet cronometrado, pesquisa do que funciona no nicho ranqueada pelo múltiplo sobre a mediana, legendas revisadas contra o corte do feed, carrosséis, stories, nota de perfil, plano semanal, comentários, respostas, directs, reaproveitamento, auditoria e um humanizador que tira a cara de IA antes de qualquer coisa sair. Suporte a várias contas (agência) e ao conector oficial da Meta.",
+  "version": "1.0.0-ptbr",
+  "author": {
+    "name": "Marcelo - Fácil Web"
+  },
+  "license": "MIT",
+  "keywords": ["instagram", "reels", "conteúdo", "português", "pt-br", "humanizador", "social media", "agência", "marketing"]
+}

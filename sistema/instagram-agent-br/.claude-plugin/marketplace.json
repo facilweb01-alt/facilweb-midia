@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "instagram-agent-br",
+  "description": "Pacote de skills de Instagram para o Claude, em português do Brasil",
+  "owner": {
+    "name": "Marcelo - Fácil Web"
+  },
+  "plugins": [
+    {
+      "name": "instagram-agent-br",
+      "description": "Treze skills de Instagram em PT-BR: hook com nota, pesquisa de virais, revisor de legenda, humanizador e mais.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
