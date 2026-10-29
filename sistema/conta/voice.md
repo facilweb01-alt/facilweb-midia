@@ -90,8 +90,10 @@ público:
 
 ## Provas que posso usar
 
-- Maroca's, no Bessa (João Pessoa): cliente há mais de 4 anos, depoimento
-  gravado e publicado em 09/10/2026.
+- Maroca's: NÃO usar mais em conteúdo novo (decisão do Marcelo em 29/10/2026).
+- Sistema POS (maquininha PAX A960): mesa, comanda, cardápio e pagamento
+  (débito, crédito, Pix) com comprovante impresso, tudo na maquininha. Usa o
+  mesmo cardápio do sistema de delivery (confirmado pelo Marcelo em 29/10/2026).
 - {{"Centenas de estabelecimentos" aparece em duas legendas. Qual é o número
   real de clientes ativos? Com o número exato, ele vira hook; sem ele, as
   skills não usam.}}
