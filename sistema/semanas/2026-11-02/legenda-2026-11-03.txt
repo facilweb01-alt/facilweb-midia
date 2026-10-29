@@ -1,0 +1,14 @@
+Quanto o app de delivery levou do seu restaurante em outubro? Pouca gente sabe.
+
+A comissão já vem descontada no repasse. Então você vê o que caiu na conta e quase nunca vê o que ficou pelo caminho. Faz a conta.
+
+Pega o extrato de outubro no painel do app e faz assim:
+1. Soma a comissão e todas as taxas descontadas nos 31 dias.
+2. Divide pelo número de pedidos que entraram pelo app no mês, e você descobre quanto cada pedido te custou antes mesmo de a comida sair da cozinha.
+3. Multiplica o total por 12. É o que sai do seu caixa em 12 meses, só em taxa.
+
+Com esse número na mão fica fácil ver quanto vale trazer o cliente pro seu delivery próprio. Na Fácil Web ele pede pelo cardápio digital ou pelo WhatsApp, e a comissão é zero.
+
+Comenta DEMO que a gente te mostra no direct como funciona.
+
+#delivery #restaurante #cardapiodigital
