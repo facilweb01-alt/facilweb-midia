@@ -1,0 +1,108 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+let renderer, scene, camera, objs = [], cfgAtual = null;
+const loader = new THREE.TextureLoader();
+
+function telaArredondada(tex) {
+  // máscara com cantos arredondados para a tela do celular
+  const c = document.createElement('canvas'); c.width = 600; c.height = 1300;
+  const g = c.getContext('2d'); g.fillStyle = '#000'; g.fillRect(0, 0, 600, 1300);
+  g.fillStyle = '#fff'; g.beginPath(); g.roundRect(0, 0, 600, 1300, 70); g.fill();
+  return new THREE.CanvasTexture(c);
+}
+
+function celular(tex) {
+  const grupo = new THREE.Group();
+  const corpo = new THREE.Mesh(new RoundedBoxGeometry(0.78, 1.64, 0.09, 8, 0.1),
+    new THREE.MeshPhysicalMaterial({ color: 0x15171c, metalness: 0.7, roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.1 }));
+  grupo.add(corpo);
+  const aro = new THREE.Mesh(new RoundedBoxGeometry(0.8, 1.66, 0.075, 8, 0.11),
+    new THREE.MeshPhysicalMaterial({ color: 0x9aa3b5, metalness: 1, roughness: 0.18 }));
+  grupo.add(aro);
+  tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+  const tela = new THREE.Mesh(new THREE.PlaneGeometry(0.72, 1.56),
+    new THREE.MeshBasicMaterial({ map: tex, alphaMap: telaArredondada(), transparent: true, toneMapped: false }));
+  tela.position.z = 0.0465; grupo.add(tela);
+  return grupo;
+}
+
+function moeda() {
+  const m = new THREE.Mesh(new THREE.CylinderGeometry(0.13, 0.13, 0.03, 48),
+    new THREE.MeshPhysicalMaterial({ color: 0xf2b400, metalness: 0.8, roughness: 0.38, emissive: 0x6b4500, emissiveIntensity: 0.45, envMapIntensity: 0.55 }));
+  return m;
+}
+
+function esfera(cor) {
+  return new THREE.Mesh(new THREE.SphereGeometry(0.08, 48, 32),
+    new THREE.MeshPhysicalMaterial({ color: cor, roughness: 0.15, clearcoat: 1 }));
+}
+
+function sombra() {
+  const c = document.createElement('canvas'); c.width = c.height = 256;
+  const g = c.getContext('2d'); const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+  gr.addColorStop(0, 'rgba(0,0,0,0.55)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 0.5),
+    new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false }));
+  m.rotation.x = -Math.PI / 2; return m;
+}
+
+window.montar = async (cfg) => {
+  cfgAtual = cfg;
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+  renderer.setPixelRatio(1); renderer.setSize(cfg.w, cfg.h);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
+  document.body.appendChild(renderer.domElement);
+  scene = new THREE.Scene();
+  if (cfg.fundo) { const bt = await loader.loadAsync(cfg.fundo); bt.colorSpace = THREE.SRGBColorSpace; scene.background = bt; }
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+  camera = new THREE.PerspectiveCamera(cfg.fov || 30, cfg.w / cfg.h, 0.1, 50);
+  camera.position.set(...(cfg.cam || [0, 0, 5])); camera.lookAt(0, cfg.alvoY || 0, 0);
+  const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(2, 3, 4); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x8dc63f, 1.2); rim.position.set(-3, 1, -2); scene.add(rim);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+  objs = [];
+  for (const ph of cfg.phones || []) {
+    const tex = await loader.loadAsync(ph.tex);
+    const g = celular(tex); g.position.set(...ph.pos); g.rotation.set(...ph.rot);
+    g.scale.setScalar(ph.s || 1); scene.add(g);
+    const sh = sombra(); sh.position.set(ph.pos[0], ph.pos[1] - 0.95 * (ph.s || 1), ph.pos[2]);
+    sh.scale.setScalar(ph.s || 1); if (ph.sombra !== false) scene.add(sh);
+    objs.push({ g, base: ph, tipo: 'phone' });
+  }
+  for (const c of cfg.moedas || []) {
+    const m = c.tipo === 'esfera' ? esfera(c.cor) : moeda();
+    m.position.set(...c.pos); m.rotation.set(...(c.rot || [1.2, 0, 0.4])); m.scale.setScalar(c.s || 1);
+    scene.add(m); objs.push({ g: m, base: c, tipo: 'moeda' });
+  }
+  window.quadro(0);
+  return true;
+};
+
+// t em segundos: movimento suave para o reel
+window.quadro = (t) => {
+  for (const o of objs) {
+    const b = o.base;
+    if (o.tipo === 'phone') {
+      const amp = cfgAtual.giro ?? 0.0;
+      o.g.rotation.y = b.rot[1] + Math.sin(t * 0.9 + (b.fase || 0)) * amp;
+      o.g.position.y = b.pos[1] + Math.sin(t * 1.3 + (b.fase || 0)) * (cfgAtual.flutua ?? 0);
+    } else {
+      o.g.rotation.z = (b.rot ? b.rot[2] : 0.4) + t * 1.2;
+      o.g.position.y = b.pos[1] + Math.sin(t * 1.6 + b.pos[0] * 3) * 0.05;
+    }
+  }
+  renderer.render(scene, camera);
+  return true;
+};
+window.pronto = true;
+</script></body></html>
