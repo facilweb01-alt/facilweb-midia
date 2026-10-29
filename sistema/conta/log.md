@@ -18,3 +18,4 @@ esperar pelo menos 15 a 20 posts antes de concluir qualquer coisa.
 
 - 28/10/2026: voice.md criado.
 - 28/10/2026: nota do perfil 58/100 (`/ig-profile`). Projeção após as reescritas: 83/100. Funil 30 dias: 374 alcance, 28 visitas ao perfil, 1 clique no link, +7 seguidores.
+- 29/10/2026 (tarefa semanal): nenhum post publicado entre 15/10 e 29/10 (conector da Meta, últimos 14 dias: 0 posts). Conta nos últimos 7 dias: 4.552 seguidores (+2 novos seguidores brutos), alcance 17, 9 visitas ao perfil, 0 cliques no link. O carrossel e os 3 stories aprovados para 29/10 às 15h ainda não tinham saído na hora da leitura (8h58); entram no log da próxima semana.
