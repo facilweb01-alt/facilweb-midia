@@ -10,9 +10,9 @@ segundos do vídeo.
 | dia | hora | formato | tipo | fórmula | ângulo |
 | --- | --- | --- | --- | --- | --- |
 | SEG 02/11 | - | - | - | - | Finados. Só engajamento. |
-| TER 03/11 | 9h30 | REEL | ENSINO | #7 Jeito Errado | A conta da comissão: pegar o extrato do app do mês passado e somar o que saiu em taxa. Precisa de {{um extrato real ou um exemplo autorizado}} |
+| TER 03/11 | 9h30 | CARROSSEL 3D | ENSINO | Conta da comissão | APROVADO e agendado em 29/10: "Seu delivery vendendo sozinho" (8 slides, pasta 2026-11-03) |
 | QUA 04/11 | 9h30 | REEL | PROVA | #25 Resultado de Outra Pessoa | Recorte de 30 a 40s do depoimento do Maroca's (o vídeo de 114s já existe) |
-| QUI 05/11 | - | STORIES | - | #16 | Caixa de pergunta: "Quanto você pagou de comissão no app no mês passado?" |
+| QUI 05/11 | 15h | REEL 3D | TELA REAL | 5 ferramentas | APROVADO e agendado em 29/10: reel 3D de 19 s (pasta 2026-11-05). Stories do dia seguem pendentes |
 | SEX 06/11 | 15h | CARROSSEL | ENSINO | Legenda Trabalho B | 4 jeitos de o cliente pedir direto com você (cardápio na bio, QR na embalagem, cupom na primeira compra direta, WhatsApp) |
 | SÁB 07/11 | 10h | REEL | OPINIÃO | #20 Permissão | "Você não precisa sair do iFood." Precisa parar de depender só dele. {{confirmar se a marca sustenta essa posição}} |
 | DOM 08/11 | - | - | - | - | Folga. Responder comentários da semana. |
