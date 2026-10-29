@@ -42,4 +42,9 @@ em português do Brasil.
    que cada URL pública responde, e criar uma tarefa agendada de execução única
    para cada publicação, no horário do calendário, com a URL, o tipo de mídia e a
    legenda exata. Usar `skip_if_recently_published: true`.
-7. Atualizar `conta/plan.md` e `conta/log.md` e commitar.
+7. Para cada post do feed (carrossel, imagem, reel), criar também uma tarefa de
+   conferência 20 minutos depois do horário: ler o post com `get_instagram_posts`
+   e comparar a legenda com a aprovada. A API não edita legenda depois de
+   publicado: se faltar ou vier diferente, avisar o Marcelo com o link e a legenda
+   pronta pra colar (Editar no app). Stories não têm legenda.
+8. Atualizar `conta/plan.md` e `conta/log.md` e commitar.
