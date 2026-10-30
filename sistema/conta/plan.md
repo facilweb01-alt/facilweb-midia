@@ -11,9 +11,9 @@ segundos do vídeo.
 | --- | --- | --- | --- | --- | --- |
 | SÁB 31/10 | 10h | REEL + STORY | TELA REAL | Sistema POS | APROVADO em 29/10: opção 1 (tela cheia, texto animado, 22 s, pasta 2026-10-31). Story 10h05 com o mesmo vídeo. Acabamento no OpusClip |
 | SEG 02/11 | - | - | - | - | Finados. Só engajamento. |
-| TER 03/11 | 9h30 | CARROSSEL 3D | ENSINO | Conta da comissão | APROVADO e agendado em 29/10: "Seu delivery vendendo sozinho" (8 slides, pasta 2026-11-03) |
+| TER 03/11 | 9h30 | CARROSSEL 3D | ENSINO | Conta da comissão | APROVADO (v2, refeito em 29/10): celular inteiro à direita, texto em coluna, slide 8 com Comenta QUERO (pasta 2026-11-03) |
 | QUA 04/11 | 9h30 | REEL | TELA REAL | Sistema POS (lupa) | APROVADO em 29/10: opção 2 (vitrine com lupa e moedas 3D, 22 s, pasta 2026-11-04). Acabamento no OpusClip |
-| QUI 05/11 | 15h | REEL 3D | TELA REAL | 5 ferramentas | APROVADO e agendado em 29/10: reel 3D de 19 s (pasta 2026-11-05). Stories do dia seguem pendentes |
+| QUI 05/11 | 15h | REEL 3D | TELA REAL | Comissão + 5 ferramentas | APROVADO (v2, refeito em 29/10): contador R$ 4.600 no gancho, 5 ferramentas com lupa, acabamento OpusClip (pasta 2026-11-05) |
 | SEX 06/11 | 15h | CARROSSEL | ENSINO | Legenda Trabalho B | 4 jeitos de o cliente pedir direto com você (cardápio na bio, QR na embalagem, cupom na primeira compra direta, WhatsApp) |
 | SÁB 07/11 | 10h | REEL | OPINIÃO | #20 Permissão | "Você não precisa sair do iFood." Precisa parar de depender só dele. {{confirmar se a marca sustenta essa posição}} |
 | DOM 08/11 | - | - | - | - | Folga. Responder comentários da semana. |
