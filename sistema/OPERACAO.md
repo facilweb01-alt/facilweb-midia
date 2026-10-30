@@ -18,7 +18,16 @@ em português do Brasil.
 3. Publicar só pela API oficial (`publish_instagram_media`), nunca por navegador.
 4. Nada inventado: número, cliente ou resultado só se estiver em `conta/voice.md`
    ou se o Marcelo informar.
-5. Toda legenda passa por `instagram-agent-br/skills/ig-caption/caption.py`
+5. **Vídeos (reels e stories) não terminam com "Comenta DEMO"** nem outra chamada
+   na tela final: o encerramento é logo + mensagem + @facilweb/site (pedido do
+   Marcelo em 29/10/2026).
+6. **Todo vídeo passa pelo OpusClip (AI Producer) como acabamento padrão** antes
+   de ir para aprovação: subir o vídeo editado (URL pública do repositório via
+   `start_project_from_attachment`), colocar os efeitos sonoros da biblioteca nas
+   viradas (`place_sound_effects`), exportar e mandar ao Marcelo o link do projeto
+   no OpusClip. O download do export não funciona deste ambiente: o Marcelo baixa
+   pelo OpusClip.
+7. Toda legenda passa por `instagram-agent-br/skills/ig-caption/caption.py`
    (veredito PRONTA) e por `ig-human/detect.py` (APROVADO, nota 70+).
 
 ## Limites da API
