@@ -103,8 +103,7 @@ público:
 
 ## O pedido
 
-- **Palavra-chave de CTA:** {{não usa hoje. Sugestão para testar: DEMO
-  (curta, fácil de falar no vídeo). Confirme ou troque.}}
+- **Palavra-chave de CTA:** QUERO (definida pelo Marcelo em 29/10/2026; DEMO não é mais usada).
 - **O que a palavra-chave entrega:** {{ex.: a demonstração gratuita agendada,
   ou uma conta de quanto o restaurante paga de comissão por mês}}
 - **Para onde vai o link:** link da bio e WhatsApp da equipe. {{o link da bio é

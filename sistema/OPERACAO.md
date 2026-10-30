@@ -41,7 +41,7 @@ em português do Brasil.
 1. Ler `conta/voice.md`, `conta/plan.md`, `conta/log.md` e as skills em
    `instagram-agent-br/skills/` (principalmente ig-plan, ig-carousel, ig-caption, ig-human).
 2. Montar a semana seguinte (segunda a domingo): 3 a 4 posts no feed, stories nos
-   dias de post, CTA com palavra-chave DEMO. Horários: 9h30 ou 15h (horário de Brasília).
+   dias de post, CTA na legenda com a palavra-chave QUERO (a palavra DEMO não é mais usada). Horários: 9h30 ou 15h (horário de Brasília).
 3. Gerar as artes no VISUAL 3D aprovado em 29/10/2026 (o padrão antigo, de slide
    plano com texto e print, foi reprovado pelo Marcelo). Usar `sistema/criativos3d/`:
    `telas.py` monta as telas de celular com recortes reais do sistema,

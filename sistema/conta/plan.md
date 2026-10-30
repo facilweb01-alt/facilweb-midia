@@ -9,16 +9,16 @@ segundos do vídeo.
 
 | dia | hora | formato | tipo | fórmula | ângulo |
 | --- | --- | --- | --- | --- | --- |
-| SÁB 31/10 | 10h | REEL + STORY | TELA REAL | Sistema POS | APROVADO e agendado em 29/10: "Pare de correr até o caixa" (26 s, pasta 2026-10-31). Story 10h05 com o mesmo vídeo (fim RESPONDE DEMO). Entrou no lugar do reel do Maroca's |
+| SÁB 31/10 | 10h | REEL + STORY | TELA REAL | Sistema POS | APROVADO em 29/10: opção 1 (tela cheia, texto animado, 22 s, pasta 2026-10-31). Story 10h05 com o mesmo vídeo. Acabamento no OpusClip |
 | SEG 02/11 | - | - | - | - | Finados. Só engajamento. |
 | TER 03/11 | 9h30 | CARROSSEL 3D | ENSINO | Conta da comissão | APROVADO e agendado em 29/10: "Seu delivery vendendo sozinho" (8 slides, pasta 2026-11-03) |
-| QUA 04/11 | 9h30 | REEL | PROVA | #25 Resultado de Outra Pessoa | {{a definir: o Maroca's não será mais divulgado (decisão de 29/10)}} |
+| QUA 04/11 | 9h30 | REEL | TELA REAL | Sistema POS (lupa) | APROVADO em 29/10: opção 2 (vitrine com lupa e moedas 3D, 22 s, pasta 2026-11-04). Acabamento no OpusClip |
 | QUI 05/11 | 15h | REEL 3D | TELA REAL | 5 ferramentas | APROVADO e agendado em 29/10: reel 3D de 19 s (pasta 2026-11-05). Stories do dia seguem pendentes |
 | SEX 06/11 | 15h | CARROSSEL | ENSINO | Legenda Trabalho B | 4 jeitos de o cliente pedir direto com você (cardápio na bio, QR na embalagem, cupom na primeira compra direta, WhatsApp) |
 | SÁB 07/11 | 10h | REEL | OPINIÃO | #20 Permissão | "Você não precisa sair do iFood." Precisa parar de depender só dele. {{confirmar se a marca sustenta essa posição}} |
 | DOM 08/11 | - | - | - | - | Folga. Responder comentários da semana. |
 
-CTA da semana: comentar DEMO, que entrega a demonstração gratuita pelo direct.
+CTA da semana: comentar QUERO, que entrega a demonstração gratuita pelo direct.
 
 ## Stories (todo dia, 3 a 5 quadros)
 
@@ -29,8 +29,8 @@ CTA da semana: comentar DEMO, que entrega a demonstração gratuita pelo direct.
 
 ## Rotina de comentários
 
-- Primeira hora depois de cada post: responder tudo, na ordem DEMO > lead > pergunta > apoio.
-- Quem comentou DEMO recebe o direct com a entrega primeiro, sem pergunta antes.
+- Primeira hora depois de cada post: responder tudo, na ordem QUERO > lead > pergunta > apoio.
+- Quem comentou QUERO recebe o direct com a entrega primeiro, sem pergunta antes.
 - Pergunta que se repete vira reel de resposta (#16).
 - Hater e spam: não responder. Ocultar se for ofensivo.
 - Domingo: limpar o que ficou sem resposta na semana.
