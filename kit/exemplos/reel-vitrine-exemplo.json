@@ -1,0 +1,106 @@
+{
+  "marca": "marca-facilweb.json",
+  "video": "bruto-pos.mp4",
+  "saida": "saida/reel-vitrine.mp4",
+  "estilo": "vitrine",
+  "musica": "B",
+  "sr": false,
+  "gancho": {
+    "trecho": [
+      44.3,
+      46.1,
+      1.0
+    ],
+    "linhas": [
+      "Pare de",
+      "correr até",
+      "o <span>caixa</span>"
+    ],
+    "destaque": "sua mesa paga em 1 minuto",
+    "pergunta": "Seu garçom ainda corre até o caixa?",
+    "titulo": "Agora a mesa<br><span>paga em 1 minuto</span>"
+  },
+  "passos": [
+    {
+      "ini": 0.5,
+      "fim": 7.5,
+      "vel": 3.0,
+      "palavra": "MESA",
+      "sub": "escolhe a mesa no app",
+      "titulo": "Escolhe<br>a <span>mesa</span>"
+    },
+    {
+      "ini": 7.5,
+      "fim": 19.0,
+      "vel": 4.0,
+      "palavra": "COMANDA",
+      "sub": "abre com o nome do cliente",
+      "titulo": "Abre a<br><span>comanda</span>"
+    },
+    {
+      "ini": 19.0,
+      "fim": 30.0,
+      "vel": 3.0,
+      "palavra": "CARDÁPIO",
+      "sub": "lança o pedido na hora",
+      "titulo": "Lança pelo<br><span>cardápio</span>"
+    },
+    {
+      "ini": 30.0,
+      "fim": 40.0,
+      "vel": 2.5,
+      "palavra": "PAGAMENTO",
+      "sub": "débito, crédito ou <span>Pix</span>",
+      "titulo": "Cobra <span>débito,</span><br><span>crédito ou Pix</span>"
+    },
+    {
+      "trechos": [
+        [
+          40.0,
+          44.3,
+          2.5
+        ],
+        [
+          44.3,
+          46.1,
+          1.0
+        ]
+      ],
+      "palavra": "COMPROVANTE",
+      "sub": "sai <span>impresso</span> ali na mesa",
+      "titulo": "Comprovante<br><span>na hora</span>"
+    }
+  ],
+  "lupas": [
+    {
+      "fonte": 24.0,
+      "recorte": [
+        0.23,
+        0.27,
+        0.74,
+        0.43
+      ],
+      "passo": 3,
+      "quando": 0.4,
+      "etiqueta": "Pedido lançado"
+    },
+    {
+      "fonte": 36.0,
+      "recorte": [
+        0.11,
+        0.27,
+        0.58,
+        0.52
+      ],
+      "passo": 4,
+      "quando": 0.45,
+      "etiqueta": "Débito, crédito ou Pix"
+    }
+  ],
+  "selo_cartao": "TELA REAL DO SISTEMA",
+  "final": {
+    "kicker": "SISTEMA POS FÁCIL WEB",
+    "titulo": "Tudo na<br><span>maquininha</span>",
+    "texto": "Mesa, comanda, cardápio e pagamento.<br>Com o mesmo cardápio do seu delivery."
+  }
+}

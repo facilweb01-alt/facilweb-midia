@@ -1,0 +1,14 @@
+{
+  "nome": "Fácil Web",
+  "handle": "@facilweb",
+  "site": "facilwebdelivery.com.br",
+  "logo": "logo-facilweb.png",
+  "cores": {
+    "primaria": "#0A3D9E",
+    "escura": "#041d55",
+    "destaque": "#8DC63F",
+    "acento": "#F7941D",
+    "clara": "#1f6bf0"
+  },
+  "fonte": "Poppins"
+}

@@ -1,0 +1,15 @@
+{
+  "marca": "marca-facilweb.json",
+  "saida": "saida/reel3d.mp4",
+  "musica": "A",
+  "gancho": {"tipo": "contador", "topo": "Você paga", "prefixo": "R$ ", "valor": 4600,
+             "base": "por mês de comissão<br>pro app de delivery?", "nota": "Exemplo: R$ 20 mil vendidos no app, comissão de 23%"},
+  "ponte": ["E se esse dinheiro<br><span>ficasse com você?</span>", "3 ferramentas que<br>vendem <span>sozinhas</span>"],
+  "ponte_telas": ["telas/cardapio.png", "telas/roleta.png", "telas/carrinho.png"],
+  "itens": [
+    {"palavra": "CARDÁPIO", "sub": "com a sua marca, <span>sem baixar app</span>", "etiqueta": "O pedido entra pelo seu link", "tela": "telas/cardapio.png", "recorte": [10, 380, 590, 625]},
+    {"palavra": "ROLETA", "sub": "o cupom <span>já entra no pedido</span>", "etiqueta": "Gira e ganha desconto", "tela": "telas/roleta.png", "recorte": [60, 380, 540, 940]},
+    {"palavra": "CARRINHO", "sub": "desistiu? <span>o WhatsApp chama</span>", "etiqueta": "Recupera a venda sozinho", "tela": "telas/carrinho.png", "recorte": [20, 290, 540, 830]}
+  ],
+  "final": {"titulo": "Seu delivery<br><span>vendendo sozinho</span>", "linha1": "Sem comissão por pedido", "linha2": "Sistema para restaurante <span class='l'>Fácil Web</span>"}
+}

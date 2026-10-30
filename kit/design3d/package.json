@@ -1,0 +1,7 @@
+{
+  "name": "kit-design3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Celulares 3D (three.js) renderizados em Chromium headless para artes de redes sociais",
+  "dependencies": { "three": "0.160.0" }
+}

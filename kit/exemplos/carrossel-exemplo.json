@@ -1,0 +1,11 @@
+{
+  "marca": "marca-facilweb.json",
+  "saida": "saida/carrossel",
+  "slides": [
+    {"tipo": "capa", "titulo": "SEU DELIVERY<br>VENDENDO <span>SOZINHO</span>", "texto": "5 ferramentas que já vêm no sistema. <b>Sem comissão por pedido.</b>", "telas": ["telas/cardapio.png", "telas/roleta.png", "telas/carrinho.png"]},
+    {"tipo": "numero", "grande": "R$", "titulo": "R$ 20 mil no app.<br><span>R$ 4.600</span> de comissão.", "texto": "Todo mês. Esse dinheiro pode ficar com você.", "nota": "Exemplo com comissão de 23%."},
+    {"tipo": "lateral", "num": "01", "titulo": "Cardápio digital <span>com a sua marca</span>", "texto": "O cliente pede pelo seu link, sem baixar app.", "tela": "telas/cardapio.png"},
+    {"tipo": "lateral", "num": "02", "titulo": "Roleta de <span>desconto</span>", "texto": "Ele gira, ganha o cupom e o código já entra no pedido.", "tela": "telas/roleta.png"},
+    {"tipo": "cta", "titulo": "Comenta <span>QUERO</span>", "texto": "e a gente te mostra funcionando no seu restaurante.", "chip": "COMENTA QUERO", "tela": "telas/economia.png"}
+  ]
+}
