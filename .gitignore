@@ -1,0 +1,5 @@
+# gerados localmente (artes só entram no repositório após aprovação, nas pastas AAAA-MM-DD/)
+sistema/criativos3d/node_modules/
+sistema/criativos3d/cenas_*.json
+sistema/semanas/*/out3d/
+sistema/semanas/*/saida/
