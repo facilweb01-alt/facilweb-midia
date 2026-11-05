@@ -1,0 +1,21 @@
+REEL (PENDENTE: precisa do vídeo gravado pelo Marcelo) · sugestão: SEX 13/11 15h ou semana seguinte
+Tema: o pedido saindo impresso sozinho, gravado num restaurante de verdade (tela real, não mockup)
+Hook (hookscore 80.2): "Pare de caçar pedido no WhatsApp às 8 da noite de sexta."
+Duração alvo: 20 a 30 s · vertical 1080x1920 · sem "Comenta" na tela final
+
+0:00-0:02  CELULAR na mão abrindo o WhatsApp cheio de conversas.
+           Tela: PARE DE CAÇAR PEDIDO NO WHATSAPP
+0:02-0:06  Close no cardápio digital: cliente adicionando itens e finalizando.
+           Tela: O CLIENTE MONTA SOZINHO
+0:06-0:12  Mensagem do pedido chegando completa (itens, endereço, Pix).
+           Tela: CHEGA COMPLETO
+0:12-0:20  Impressora da cozinha soltando o pedido; mão pega o papel e entrega pro cozinheiro.
+           Tela: SAI IMPRESSO NA COZINHA
+0:20-0:25  Final: logo Fácil Web + "Pedido pronto, sem ninguém digitar" + @facilweb / facilwebdelivery.com.br
+
+O que gravar (celular na vertical, 5 a 10 s cada take):
+1. WhatsApp com várias conversas não lidas (pode ser conta de teste, sem nome de cliente).
+2. Tela do cardápio digital sendo usada (dedo rolando e adicionando).
+3. Chegada do pedido no WhatsApp/painel.
+4. Impressora térmica imprimindo o pedido (o take mais importante).
+Depois: edição + acabamento no OpusClip (regra 6 da OPERACAO.md).

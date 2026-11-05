@@ -1,0 +1,14 @@
+SEMANA 09 a 15/11/2026 · STATUS: PENDENTE de aprovação do Marcelo (enviado em 05/11/2026). Nada agendado, nada commitado em pasta de data.
+
+Calendário (horário de Brasília -> UTC)
+TER 10/11 09:30 (12:30Z) CARROSSEL 7 slides "Pare de caçar pedido no WhatsApp"   legenda-2026-11-10.txt
+TER 10/11 09:40 (12:40Z) 3 STORIES (story-1..3)
+QUI 12/11 15:00 (18:00Z) CARROSSEL 7 slides "Cliente fiel pagando comissão?"      legenda-2026-11-12.txt
+QUI 12/11 15:10 (18:10Z) 3 STORIES
+SÁB 14/11 09:30 (12:30Z) CARROSSEL 6 slides "23h somando comanda na calculadora?" legenda-2026-11-14.txt
+SÁB 14/11 09:40 (12:40Z) 3 STORIES
+REEL: só roteiro (roteiro-reel-PENDENTE.txt), aguardando vídeo.
+
+Artes: saida/AAAA-MM-DD/ (gerar_semana.py; telas extras em criativos3d/telas_semana_0911.py)
+Legendas: caption.py PRONTA nas 3; detect.py APROVADO (75.9 / 89.4 / 75.0)
+Hooks (hookscore): 80.2 / 88.0 / 81.4
