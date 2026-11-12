@@ -1,0 +1,19 @@
+SEMANA 16 a 22/11/2026 · STATUS: PENDENTE de aprovação do Marcelo (enviado em 12/11/2026). Nada agendado, nada commitado em pasta de data.
+
+Calendário (horário de Brasília -> UTC)
+TER 17/11 09:30 (12:30Z) CARROSSEL 7 slides "Seu desconto ainda paga comissão?" (Black Friday, roleta)  legenda-2026-11-17.txt
+TER 17/11 09:40 (12:40Z) 3 STORIES (story-1..3)
+QUI 19/11 15:00 (18:00Z) CARROSSEL 7 slides "Cliente fiel pagando comissão?" (reaproveitado da semana 09-15/11, nunca publicado)  legenda-2026-11-19.txt
+QUI 19/11 15:10 (18:10Z) 3 STORIES
+SEX 20/11 feriado (Consciência Negra): sem post, só engajamento
+SÁB 21/11 09:30 (12:30Z) CARROSSEL 7 slides "Postou às 19h e nenhum pedido?" (link do cardápio no Instagram)  legenda-2026-11-21.txt
+SÁB 21/11 09:40 (12:40Z) 3 STORIES
+REEL: só roteiro (roteiro-reel-PENDENTE.txt), aguardando vídeo.
+
+Artes: saida/AAAA-MM-DD/ (gerar_semana.py), prévias em prancha-AAAA-MM-DD.jpg. Logo no selo branco em todas as 30 peças.
+Legendas: caption.py PRONTA nas 3; detect.py APROVADO (84.4 / 89.4 / 75.6)
+Hooks (hookscore): 80.8 / 88.0 / 83.1
+Pendências para o Marcelo: confirmar que a roleta de desconto está disponível para os clientes (post de 17/11);
+o link próprio do cardápio (seunome.facilweb.com.br, visto no print do sistema) vale para todos os planos (post de 21/11).
+Métricas: conector da Meta (Pipeboard) no limite semanal do plano grátis em 12/11; log sem números novos.
+Reserva: carrosséis "Pare de caçar pedido no WhatsApp" e "23h somando comanda" (semana 09-15/11) continuam prontos e não publicados.
