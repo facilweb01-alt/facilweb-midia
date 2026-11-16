@@ -13,3 +13,17 @@ sistema/semanas/*/*/reels/out/
 sistema/semanas/*/*/reels/*.mp4
 sistema/semanas/*/*/reels/*-capa.jpg
 sistema/semanas/*/*/reels/__pycache__/
+sistema/semanas/*/*/narrado/broll/raw/
+sistema/semanas/*/*/narrado/broll/frames/
+sistema/semanas/*/*/narrado/r*/quadros/
+sistema/semanas/*/*/narrado/**/*.mp4
+sistema/semanas/*/*/narrado/**/*.wav
+sistema/semanas/*/*/narrado/**/*.m4a
+sistema/semanas/*/*/narrado/*.mp4
+sistema/semanas/*/*/narrado/cine.html
+sistema/semanas/*/*/narrado/three
+sistema/semanas/*/*/narrado/fontes
+sistema/semanas/*/*/narrado/fone.html
+sistema/semanas/*/*/reels/frames/
+sistema/semanas/*/*/reels/*.log
+sistema/semanas/*/*/narrado/r*/render.log

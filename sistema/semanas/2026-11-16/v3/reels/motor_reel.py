@@ -104,6 +104,7 @@ async def renderizar(nome, cenas, legendas, dur, previa=False):
         tempos = [c["a"] + (c["b"] - c["a"]) * 0.7 for c in cenas] if previa else [i / FPS for i in range(int(dur * FPS))]
         for i, t in enumerate(tempos):
             await pg.evaluate(f"render({t})")
+            await pg.evaluate("Promise.all([...document.images].filter(i=>!i.complete).map(i=>new Promise(r=>{i.onload=i.onerror=r})))")
             await pg.screenshot(path=os.path.join(out, "q", f"{i:05d}.jpg"), type="jpeg", quality=90)
         await b.close()
     if previa:

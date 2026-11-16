@@ -1,0 +1,102 @@
+{
+ "nome": "reel-black-friday",
+ "voz": "r2/voz.json",
+ "wav": "r2/voz.wav",
+ "musica": "B",
+ "maxpal": 4,
+ "marca": {
+  "nome": "Fácil Web",
+  "selo": "facilweb",
+  "url": "facilwebdelivery.com.br",
+  "logo": "/marca/logo.png",
+  "cores": {
+   "fundo": "#041a4a",
+   "primaria": "#0A3D9E",
+   "escura": "#06235f",
+   "clara": "#1f6bf0",
+   "destaque": "#F7941D",
+   "acento": "#8DC63F"
+  }
+ },
+ "chaves": [
+  "margem",
+  "bolso",
+  "comissão",
+  "roleta",
+  "zero",
+  "sua",
+  "seu"
+ ],
+ "flashPal": [
+  "zero"
+ ],
+ "cenas": [
+  {
+   "tipo": "broll",
+   "clip": "pizzaiolo",
+   "ini": 0.5,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "cx": 0.5
+  },
+  {
+   "tipo": "broll",
+   "clip": "forno2",
+   "ini": 1.0,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "cx": 0.45
+  },
+  {
+   "tipo": "phone",
+   "tela": "roleta",
+   "y0": 0,
+   "y1": 140,
+   "cam": "entra",
+   "cards": [
+    {
+     "x": 40,
+     "y": 430,
+     "t": 0.4,
+     "txt": "Gire e ganhe",
+     "sub": "a promoção é sua",
+     "cor": "#F7941D",
+     "r": -3
+    }
+   ]
+  },
+  {
+   "tipo": "phone",
+   "tela": "cardapio",
+   "y0": 0,
+   "y1": 300,
+   "cam": "orbita",
+   "cards": [
+    {
+     "x": 560,
+     "y": 1150,
+     "t": 0.35,
+     "big": "R$ 0",
+     "txt": "de taxa",
+     "sub": "no cupom e no pedido",
+     "azul": true,
+     "r": 3
+    }
+   ]
+  },
+  {
+   "tipo": "marca"
+  },
+  {
+   "tipo": "fim"
+  }
+ ],
+ "fim": {
+  "linha": "Cardápio digital sem comissão.",
+  "trio": "/marca/trio.png"
+ }
+}

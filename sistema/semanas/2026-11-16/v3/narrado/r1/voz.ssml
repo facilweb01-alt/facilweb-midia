@@ -1,0 +1,8 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="pt-BR"><voice name="pt-BR-FranciscaNeural"><prosody rate="+6%">
+<bookmark mark="s1"/>Seu cliente quer pedir de você.<break time="200ms"/>
+<bookmark mark="s2"/>Mas ele pede pelo app, e cada pedido paga taxa.<break time="200ms"/>
+<bookmark mark="s3"/>Com a Fácil Web, seu restaurante tem cardápio digital, com o seu link.<break time="200ms"/>
+<bookmark mark="s4"/>Roleta de cupons e pontos de fidelidade, pra ele voltar.<break time="200ms"/>
+<bookmark mark="s5"/>E o atendente virtual responde no <sub alias="uótsap">WhatsApp</sub>, na hora.<break time="350ms"/>
+<bookmark mark="s6"/>Fácil Web. Seu delivery, sem comissão por pedido.<break time="200ms"/>
+</prosody></voice></speak>

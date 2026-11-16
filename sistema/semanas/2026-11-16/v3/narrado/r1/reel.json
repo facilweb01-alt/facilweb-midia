@@ -1,0 +1,125 @@
+{
+ "nome": "reel-teste-gratis",
+ "voz": "r1/voz.json",
+ "wav": "r1/voz.wav",
+ "musica": "A",
+ "maxpal": 4,
+ "marca": {
+  "nome": "Fácil Web",
+  "selo": "facilweb",
+  "url": "facilwebdelivery.com.br",
+  "logo": "/marca/logo.png",
+  "cores": {
+   "fundo": "#041a4a",
+   "primaria": "#0A3D9E",
+   "escura": "#06235f",
+   "clara": "#1f6bf0",
+   "destaque": "#8DC63F",
+   "acento": "#F7941D"
+  }
+ },
+ "chaves": [
+  "você",
+  "taxa",
+  "link",
+  "voltar",
+  "virtual",
+  "comissão"
+ ],
+ "flashPal": [
+  "taxa"
+ ],
+ "cenas": [
+  {
+   "tipo": "broll",
+   "clip": "mulhercel",
+   "ini": 2.0,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "cx": 0.5
+  },
+  {
+   "tipo": "broll",
+   "clip": "cozinha",
+   "ini": 0.5,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "cx": 0.55
+  },
+  {
+   "tipo": "phone",
+   "tela": "cardapio",
+   "y0": 0,
+   "y1": 260,
+   "cam": "entra",
+   "cards": [
+    {
+     "x": 40,
+     "y": 430,
+     "t": 0.35,
+     "big": "0%",
+     "txt": "de taxa",
+     "sub": "por pedido no seu link",
+     "azul": true,
+     "r": -3
+    }
+   ]
+  },
+  {
+   "tipo": "phone",
+   "tela": "roleta",
+   "y0": 0,
+   "y1": 120,
+   "cam": "orbita",
+   "cards": [
+    {
+     "x": 600,
+     "y": 460,
+     "t": 0.3,
+     "txt": "Cupom no pedido",
+     "sub": "roleta de cupons",
+     "cor": "#F7941D",
+     "r": 3
+    },
+    {
+     "x": 40,
+     "y": 1150,
+     "t": 0.6,
+     "txt": "Pontos",
+     "sub": "a cada pedido direto",
+     "cor": "#8DC63F",
+     "r": -2
+    }
+   ]
+  },
+  {
+   "tipo": "phone",
+   "tela": "carrinho",
+   "y0": 0,
+   "y1": 160,
+   "cam": "orbita",
+   "cards": [
+    {
+     "x": 560,
+     "y": 1150,
+     "t": 0.35,
+     "txt": "Atendente virtual",
+     "sub": "no seu WhatsApp",
+     "azul": true,
+     "r": 3
+    }
+   ]
+  },
+  {
+   "tipo": "fim"
+  }
+ ],
+ "fim": {
+  "linha": "Seu delivery, sem comissão por pedido.",
+  "trio": "/marca/trio.png"
+ }
+}
