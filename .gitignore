@@ -9,3 +9,7 @@ sistema/semanas/*/*/prancha-*.jpg
 node_modules/
 __pycache__/
 package-lock.json
+sistema/semanas/*/*/reels/out/
+sistema/semanas/*/*/reels/*.mp4
+sistema/semanas/*/*/reels/*-capa.jpg
+sistema/semanas/*/*/reels/__pycache__/
