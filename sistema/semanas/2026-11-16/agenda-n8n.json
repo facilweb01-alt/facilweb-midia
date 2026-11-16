@@ -45,6 +45,17 @@
   "legenda": ""
  },
  {
+  "chave": "fw-20261118-reel",
+  "conta": "17841448285791740",
+  "quando": "2026-11-18T18:00:00Z",
+  "tipo": "REELS",
+  "arquivos": [
+   "https://raw.githubusercontent.com/facilweb01-alt/facilweb-midia/main/2026-11-18/reel-black-friday.mp4"
+  ],
+  "capa": "https://raw.githubusercontent.com/facilweb01-alt/facilweb-midia/main/2026-11-18/reel-capa.jpg",
+  "legenda": "Seu desconto da Black Friday ainda paga comissão pro app? E a sua margem, pra onde vai?\n\nNo app, o desconto sai do seu bolso e a comissão continua em cima de cada pedido, com promoção ou sem.\n\nNo seu cardápio digital da Fácil Web, a promoção roda na roleta de cupons. O cliente gira, o cupom entra direto no pedido e a taxa por pedido é zero.\n\nPromoção sua, lucro seu.\n\nQuer montar a sua Black Friday no seu link? Comenta QUERO que a gente libera pra você testar grátis.\n\n#blackfriday #cardapiodigital #deliveryproprio #joaopessoa"
+ },
+ {
   "chave": "fw-20261119-carrossel",
   "conta": "17841448285791740",
   "quando": "2026-11-19T18:00:00Z",
@@ -134,5 +145,16 @@
    "https://raw.githubusercontent.com/facilweb01-alt/facilweb-midia/main/2026-11-21/story-3.jpg"
   ],
   "legenda": ""
+ },
+ {
+  "chave": "fw-20261122-reel",
+  "conta": "17841448285791740",
+  "quando": "2026-11-22T13:00:00Z",
+  "tipo": "REELS",
+  "arquivos": [
+   "https://raw.githubusercontent.com/facilweb01-alt/facilweb-midia/main/2026-11-22/reel-teste-gratis.mp4"
+  ],
+  "capa": "https://raw.githubusercontent.com/facilweb01-alt/facilweb-midia/main/2026-11-22/reel-capa.jpg",
+  "legenda": "Seu cliente fiel ainda pede pelo app e você paga 27% de taxa?\n\nDá pra virar esse jogo sem sair do app de uma vez. Com a Fácil Web, o seu restaurante ganha um cardápio digital com link próprio, roleta de cupons e pontos de fidelidade, que fazem o cliente da sexta voltar no sábado direto pelo seu canal. Simples assim.\n\nChamou no WhatsApp às 20h de sexta? O atendente virtual responde na hora e manda o seu link. Pronto. O pedido chega completo, com endereço e pagamento, e não paga taxa nenhuma.\n\nRestaurante novo testa antes de decidir. Comenta QUERO que a gente libera pra você testar grátis.\n\n#deliveryproprio #cardapiodigital #sistemaparadelivery #joaopessoa"
  }
 ]
