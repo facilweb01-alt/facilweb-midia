@@ -1,42 +1,17 @@
-# plan.md · @facilweb · semana de 02/11 a 08/11/2026
+# plan.md · @facilweb · semana de 16/11 a 22/11/2026
 
-Ritmo: 4 posts no feed (3 reels + 1 carrossel), stories todo dia, 20 min de
-engajamento antes de postar. Reels de 30 a 45 segundos.
+Plano de crescimento: https://claude.ai/artifact/ERc2Exq6XAPvE3SG2v64xo
+Novo padrão visual (aprovado em 16/11): fundo claro, cupom fiscal, conversa de WhatsApp, tabela, telas reais do sistema, logo no selo branco.
+Regras novas (Marcelo, 16/11): mensalidade NÃO aparece em arte nem legenda (pode ser negociada); teste grátis vale para todo cliente novo (é a entrega do QUERO); atendente virtual no WhatsApp já funciona.
 
-Horário: 9h30 ou 15h, entre os picos de almoço e jantar, quando o dono de
-restaurante olha o celular. O horário pesa muito menos que os 2 primeiros
-segundos do vídeo.
+| dia | hora (Brasília) | formato | tema | status |
+| --- | --- | --- | --- | --- |
+| TER 17/11 | 15h + stories 15h10 | CARROSSEL 6 | A conta da comissão (R$ 20 mil → R$ 5.400, Black Friday) | APROVADO; arquivos em 2026-11-17/; agenda n8n PENDENTE (sessão sem navegador) |
+| QUA 18/11 | 15h | REEL 23 s | Black Friday sem comissão (roleta de cupons) | aguardando aprovação; voz pendente da chave do Azure |
+| QUI 19/11 | 15h + stories 15h10 | CARROSSEL 7 | Sexta 20h: pedido picado x cardápio + atendente virtual | APROVADO; 2026-11-19/; agenda n8n PENDENTE |
+| SEX 20/11 | - | - | Feriado | - |
+| SÁB 21/11 | 9h30 + stories 9h40 | CARROSSEL 6 | 27% no app x 0% no seu cardápio | APROVADO; 2026-11-21/; agenda n8n PENDENTE |
+| DOM 22/11 | 10h | REEL 26 s | Teste grátis (cartão final Comenta QUERO) | aguardando aprovação; voz pendente da chave do Azure |
 
-| dia | hora | formato | tipo | fórmula | ângulo |
-| --- | --- | --- | --- | --- | --- |
-| SÁB 31/10 | 10h | REEL + STORY | TELA REAL | Sistema POS | APROVADO em 29/10: opção 1 (tela cheia, texto animado, 22 s, pasta 2026-10-31). Story 10h05 com o mesmo vídeo. Acabamento no OpusClip |
-| SEG 02/11 | - | - | - | - | Finados. Só engajamento. |
-| TER 03/11 | 9h30 | CARROSSEL 3D | ENSINO | Conta da comissão | APROVADO (v2, refeito em 29/10): celular inteiro à direita, texto em coluna, slide 8 com Comenta QUERO (pasta 2026-11-03) |
-| QUA 04/11 | 9h30 | REEL | TELA REAL | Sistema POS (lupa) | APROVADO em 29/10: opção 2 (vitrine com lupa e moedas 3D, 22 s, pasta 2026-11-04). Acabamento no OpusClip |
-| QUI 05/11 | 15h | REEL 3D | TELA REAL | Comissão + 5 ferramentas | APROVADO (v2, refeito em 29/10): contador R$ 4.600 no gancho, 5 ferramentas com lupa, acabamento OpusClip (pasta 2026-11-05) |
-| SEX 06/11 | 15h | CARROSSEL | ENSINO | Legenda Trabalho B | 4 jeitos de o cliente pedir direto com você (cardápio na bio, QR na embalagem, cupom na primeira compra direta, WhatsApp) |
-| SÁB 07/11 | 10h | REEL | OPINIÃO | #20 Permissão | "Você não precisa sair do iFood." Precisa parar de depender só dele. {{confirmar se a marca sustenta essa posição}} |
-| DOM 08/11 | - | - | - | - | Folga. Responder comentários da semana. |
-
-CTA da semana: comentar QUERO, que entrega a demonstração gratuita pelo direct.
-
-## Stories (todo dia, 3 a 5 quadros)
-
-1. Algo acontecendo hoje, com rosto ou mão: implantação, suporte, cliente usando o sistema.
-2-3. O conteúdo: tela do sistema, pedido entrando, cardápio.
-4. Uma figurinha: enquete, caixa de pergunta ou link do WhatsApp.
-5. O fecho: a resposta ou o que vem amanhã.
-
-## Rotina de comentários
-
-- Primeira hora depois de cada post: responder tudo, na ordem QUERO > lead > pergunta > apoio.
-- Quem comentou QUERO recebe o direct com a entrega primeiro, sem pergunta antes.
-- Pergunta que se repete vira reel de resposta (#16).
-- Hater e spam: não responder. Ocultar se for ofensivo.
-- Domingo: limpar o que ficou sem resposta na semana.
-
-## Engajamento (20 min/dia, antes de postar)
-
-- 5 de alcance: perfis de gastronomia e "onde comer" de João Pessoa. {{nomes}}
-- 3 pares: contas próximas que você já acompanha, como @deliciasnamesa_ e @primeiraopcaovalentina. {{mais 1}}
-- 2 compradores: restaurantes de JP que ainda não são clientes. {{nomes}} Comentar por semanas antes de qualquer direct.
+Itens prontos para o nó "Agenda" do n8n: sistema/semanas/2026-11-16/agenda-n8n.json.
+CTA: Comenta QUERO → a gente libera o teste grátis pelo direct.
