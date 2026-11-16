@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+<style>*{margin:0}html,body{width:1200px;height:2000px;background:transparent;overflow:hidden}</style></head>
+<body><canvas id="gl" width="1200" height="2000"></canvas>
+<script type="module">
+// Foto de um celular 3D com tela real do app, fundo transparente. window.foto({tela,y,rx,ry,rz})
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1200, 2000, false); renderer.setClearColor(0x000000, 0);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
+const scene = new THREE.Scene();
+scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(24, 1200/2000, 0.1, 60); camera.position.set(0, 0, 4.6); camera.lookAt(0,0,0);
+const key = new THREE.DirectionalLight(0xffffff, 1.7); key.position.set(2, 3, 4); scene.add(key);
+const rim = new THREE.DirectionalLight(0x7fa0ff, 2.2); rim.position.set(-3, 1, -2); scene.add(rim);
+const rim2 = new THREE.DirectionalLight(0xf7c64a, 1.0); rim2.position.set(3, -2, -2); scene.add(rim2);
+scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+const TW = 1080, TH = 2340;
+const tcan = document.createElement('canvas'); tcan.width = TW; tcan.height = TH; const tctx = tcan.getContext('2d');
+const ttex = new THREE.CanvasTexture(tcan); ttex.colorSpace = THREE.SRGBColorSpace; ttex.anisotropy = 16;
+const mask = document.createElement('canvas'); mask.width = TW; mask.height = TH;
+{ const g = mask.getContext('2d'); g.fillStyle = '#000'; g.fillRect(0,0,TW,TH); g.fillStyle = '#fff'; g.beginPath(); g.roundRect(0,0,TW,TH,126); g.fill(); }
+const phone = new THREE.Group();
+phone.add(new THREE.Mesh(new RoundedBoxGeometry(0.78, 1.64, 0.09, 8, 0.1), new THREE.MeshPhysicalMaterial({ color: 0x15171c, metalness: 0.7, roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.1 })));
+phone.add(new THREE.Mesh(new RoundedBoxGeometry(0.8, 1.66, 0.075, 8, 0.11), new THREE.MeshPhysicalMaterial({ color: 0xb8c0d4, metalness: 1, roughness: 0.16 })));
+const tela = new THREE.Mesh(new THREE.PlaneGeometry(0.72, 1.56), new THREE.MeshBasicMaterial({ map: ttex, alphaMap: new THREE.CanvasTexture(mask), transparent: true, toneMapped: false }));
+tela.position.z = 0.0466; phone.add(tela);
+const ilha = new THREE.Mesh(new RoundedBoxGeometry(0.12, 0.034, 0.004, 4, 0.016), new THREE.MeshBasicMaterial({ color: 0x05060a }));
+ilha.position.set(0, 0.742, 0.049); phone.add(ilha);
+scene.add(phone);
+const carrega = (src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = src; });
+const nav = await carrega('/estados/nav.png');
+window.foto = async function ({ tela, y = 0, rx = 0.05, ry = -0.3, rz = 0.02 }) {
+  const im = await carrega('/estados/' + tela + '.png');
+  const s = TW / im.width;
+  tctx.fillStyle = '#d3def4'; tctx.fillRect(0, 0, TW, TH);
+  const pad = tela === 'whatsapp' ? 0 : 120; // faixa de status para a ilha não cobrir o conteúdo
+  tctx.drawImage(im, 0, y * 3, im.width, (TH - pad) / s, 0, pad, TW, TH - pad);
+  if (pad) { tctx.fillStyle = '#1b2440'; tctx.font = '600 38px sans-serif'; tctx.fillText('9:41', 90, 78); tctx.fillRect(TW - 150, 52, 60, 28); }
+  if (im.height > 2600) { const ns = TW / nav.width; tctx.drawImage(nav, 0, TH - nav.height * ns, TW, nav.height * ns); }
+  ttex.needsUpdate = true;
+  phone.rotation.set(rx, ry, rz);
+  renderer.render(scene, camera);
+  return true;
+};
+window.pronto = true;
+</script></body></html>

@@ -51,3 +51,9 @@ dele no tempo certo. Em vídeo com fala, ele também faz legendas e o corte das 
 ## Vídeo sem fala
 O OpusClip avisa `speechless_source`: legenda e corte de fala não se aplicam. Use só os efeitos.
 Não deixe ele inventar título nem cartão: o vídeo já sai pronto do kit.
+
+## Reel narrado (kit/video/narrado)
+- O `sfx.py` monta a lista de efeitos a partir do `tl.json` do render: punch no início, whoosh nas viradas, impacto suave em cena de marca, obturador nas palavras de flash, pop nos cartões azuis (até 2) e braam na logo. Mínimo de 600 ms entre efeitos; no máximo duração/2,5.
+- Vídeo narrado: o OpusClip transcreve a voz, mas **não** deixe ele pôr legenda (a legenda palavra a palavra já vem no vídeo). Use só `place_sound_effects`.
+- Suba e exporte um vídeo por vez e baixe logo depois do `get_export_url` (o link é de uso único).
+- Faça o acabamento na versão-base. As versões anúncio e post (com cartão final) podem receber o cartão já junto antes do upload, para os efeitos cobrirem o cartão também.

@@ -10,6 +10,7 @@ kit/
   instagram/               linters de legenda e gancho + MODELOS.md (agendamento, conferência, pesquisa, estratégia)
   design3d/                celulares 3D (three.js): carrossel.py, reel3d.py, tela.py
   video/                   melhorar.py, super_resolucao.py, reel_cinetico.py, musica.py, OPUSCLIP.md
+  video/narrado/           reel narrado: voz Azure + b-roll Pexels + celular 3D com telas reais + legenda palavra a palavra + cartão final (NARRADO.md)
   exemplos/                marca-facilweb.json, telas de exemplo e roteiros prontos
 ```
 
@@ -21,13 +22,14 @@ python3 kit/design3d/tela.py print.png telas/cardapio.png # print do sistema -> 
 python3 kit/design3d/carrossel.py roteiro-carrossel.json  # carrossel 1080x1350 (JPEG + prévia)
 python3 kit/design3d/reel3d.py roteiro-reel3d.json        # reel 3D 1080x1920
 python3 kit/video/reel_cinetico.py roteiro-video.json     # edita vídeo bruto em reel (tela_cheia ou vitrine)
+python3 kit/video/narrado/cine.py r1/reel.json            # reel narrado com celular 3D (ver video/NARRADO.md)
 ```
 Acrescente `--previa` aos reels para ver um quadro de cada cena antes de renderizar tudo.
 
 ## Regras de padrão
 - Logo em selo branco em toda peça.
 - Celular nunca cortado; texto legível nas áreas seguras (topo 160 px e rodapé 300 px livres no 9:16).
-- Vídeo termina com a marca, sem chamada na tela; a chamada fica na legenda (ex.: "Comenta QUERO").
+- Vídeo termina com a marca, sem chamada na tela; a chamada fica na legenda (ex.: "Comenta QUERO"). Exceção: vídeo de oferta/anúncio termina no cartão final com chamada, em duas versões (anúncio e post).
 - Todo vídeo passa pelo OpusClip (video/OPUSCLIP.md) para os efeitos sonoros antes da aprovação.
 - Nada vai ao ar sem aprovação explícita do cliente.
 - Legendas: `instagram/caption.py` (PRONTA), `instagram/detect.py` (APROVADO 70+), ganchos com `instagram/hookscore.py` (70+).

@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+:root{--fundo:#05081a;--primaria:#2443c8;--escura:#14267a;--clara:#3a62f0;--destaque:#f7c64a}
+@font-face{font-family:U;src:url(node_modules/@fontsource-variable/unbounded/files/unbounded-latin-wght-normal.woff2);font-weight:800}@font-face{font-family:IB;src:url(node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2);font-weight:700}@font-face{font-family:IM;src:url(node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2);font-weight:500}
+*{margin:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--fundo);color:#fff;font-family:IB,sans-serif}
+#bg{position:absolute;inset:0;background:radial-gradient(62% 46% at 50% 46%,var(--clara) 0%,var(--escura) 52%,var(--fundo) 100%)}
+#grade{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:72px 72px;-webkit-mask:radial-gradient(60% 45% at 50% 45%,#000,transparent)}
+.orbe{position:absolute;border-radius:50%}
+#c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding-top:285px;text-align:center}
+#logo{width:140px;height:140px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.45))}
+.l{font-family:U;letter-spacing:-.03em;line-height:1}
+#l1{font-size:80px;margin-top:40px}
+#l2{font-size:116px;margin-top:16px;white-space:nowrap;color:var(--destaque);text-shadow:0 14px 50px rgba(0,0,0,.35)}
+#l3{font-size:76px;margin-top:18px}
+#bolha{margin-top:52px;display:flex;align-items:center;gap:22px}
+#bolha .zap{background:#dcf8c6;color:#0b1330;font-family:IB;font-size:46px;padding:18px 30px;border-radius:34px 34px 8px 34px;box-shadow:0 26px 50px -18px rgba(0,0,0,.6);display:flex;align-items:center;gap:16px}
+#bolha .zap small{color:#34b7f1;font-size:40px}
+#dica{margin-top:20px;font-family:IM;font-size:34px;color:#c9d4ff;max-width:860px;line-height:1.3}
+#cta{position:relative;margin-top:40px;padding:28px 52px;border-radius:99px;background:#fff;color:var(--primaria);font-family:U;font-size:46px;white-space:nowrap;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+#cta i{position:absolute;top:0;bottom:0;width:140px;background:linear-gradient(90deg,transparent,rgba(36,67,200,.22),transparent);transform:skewX(-20deg)}
+#url{margin-top:22px;font-family:IB;font-size:34px;color:#c9d4ff}
+</style></head><body>
+<div id="bg"></div><div id="grade"></div><div id="orbes"></div>
+<div id="c">
+  <img id="logo" src="logo.png">
+  <div class="l" id="l1">Teste</div>
+  <div class="l" id="l2">24 h grátis</div>
+  <div class="l" id="l3">sem cartão</div>
+  <div id="bolha"><div class="zap">Quero testar <small>✓✓</small></div></div>
+  <div id="dica">Crie a conta em 1 minuto, no site ou no WhatsApp</div>
+  <div id="cta"><span id="ctaTxt"></span><i></i></div>
+  <div id="url">nutriforma.com.br</div>
+</div>
+<script>
+// Textos e cores por parâmetro (?modo=post|anuncio&c=<json>). Sem c, fica o exemplo.
+const q = new URLSearchParams(location.search);
+const set = (id, v) => { const e = document.getElementById(id); if (v === "") e.remove(); else if (v != null) e.textContent = v; };
+window.prepara = async () => {
+  let C = {}; try { C = JSON.parse(q.get("c") || "{}"); } catch (e) { console.error("cartao: json inválido", e); }
+  for (const [k, v] of Object.entries(C.cores || {})) document.documentElement.style.setProperty("--" + k, v);
+  if (C.logo) document.getElementById("logo").src = C.logo;
+  set("l1", C.l1); set("l2", C.l2); set("l3", C.l3); set("dica", C.dica); set("url", C.url);
+  if (C.bolha === "") document.getElementById("bolha").remove(); else if (C.bolha) document.querySelector("#bolha .zap").firstChild.textContent = C.bolha + " ";
+  const post = q.get("modo") === "post";
+  document.getElementById("ctaTxt").textContent = post ? (C.cta_post || "Link na bio 👆") : (C.cta_anuncio || "Toque no botão e comece 👇");
+  window.pronto = true;
+};
+window.prepara();
+const OR = [["#e2583b",58,90,330],["#f0b232",40,930,260],["#8fb34a",50,960,1240],["#3aa9dc",34,110,1180],["#e2583b",28,860,1560],["#f0b232",30,150,1600]];
+document.getElementById("orbes").innerHTML = OR.map(([c,s,x,y],i)=>`<span class="orbe" id="o${i}" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px;background:radial-gradient(circle at 32% 30%,#fff8,${c} 45%,#0006)"></span>`).join("");
+const ease = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
+const back = (x) => { x = Math.min(1, Math.max(0, x)); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+function quadro(t) {
+  const $ = (id) => document.getElementById(id) || { style: {} };
+  const s = back(t / 0.45); $("logo").style.transform = `scale(${s})`; $("logo").style.opacity = Math.min(1, t / 0.2);
+  [["l1", 0.18], ["l2", 0.36], ["l3", 0.58]].forEach(([id, a]) => { const p = ease((t - a) / 0.4); $(id).style.opacity = p; $(id).style.transform = `translateY(${(1 - p) * 70}px) scale(${id === "l2" ? 0.85 + 0.15 * back((t - a) / 0.45) : 1})`; });
+  const b = back((t - 1.0) / 0.4); $("bolha").style.opacity = Math.min(1, Math.max(0, (t - 1.0) / 0.15)); $("bolha").style.transform = `scale(${Math.max(0, b)})`;
+  const d = ease((t - 1.25) / 0.4); $("dica").style.opacity = d; $("dica").style.transform = `translateY(${(1 - d) * 30}px)`;
+  const c = back((t - 1.5) / 0.45); $("cta").style.opacity = Math.min(1, Math.max(0, (t - 1.5) / 0.15)); $("cta").style.transform = `scale(${Math.max(0, c) * (1 + 0.025 * Math.sin(Math.max(0, t - 2) * 6))})`;
+  $("url").style.opacity = ease((t - 1.8) / 0.4);
+  const sh = ((t - 1.9) % 1.6) / 1.6; (document.querySelector("#cta i") || { style: {} }).style.left = `${-160 + sh * 900}px`;
+  OR.forEach((_, i) => { $("o" + i).style.transform = `translateY(${Math.sin(t * 1.6 + i) * 14}px)`; });
+  $("l2").style.filter = `brightness(${1 + 0.12 * Math.max(0, Math.sin((t - 1) * 4))})`;
+}
+window.quadro = quadro; quadro(0);
+</script></body></html>

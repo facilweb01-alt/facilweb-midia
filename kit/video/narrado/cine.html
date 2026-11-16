@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+<style>
+:root{--fundo:#05081a;--primaria:#2443c8;--escura:#14267a;--clara:#3a62f0;--destaque:#f7c64a;--acento:#e2583b}
+@font-face{font-family:U;src:url(/fontes/unbounded/files/unbounded-latin-wght-normal.woff2) format('woff2');font-weight:200 900}
+@font-face{font-family:I;src:url(/fontes/instrument-sans/files/instrument-sans-latin-wght-normal.woff2) format('woff2');font-weight:400 700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--fundo);font-family:I,sans-serif;color:#fff}
+#marca-bg{position:absolute;inset:0;background:radial-gradient(70% 45% at 50% 42%,var(--primaria) 0%,var(--escura) 45%,var(--fundo) 100%)}
+#grade{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:72px 72px;-webkit-mask:radial-gradient(60% 45% at 50% 45%,#000,transparent)}
+.orbe{position:absolute;border-radius:50%;filter:blur(1px)}
+#broll{position:absolute;inset:0;overflow:hidden}
+#broll img{position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;transform-origin:50% 50%}
+#broll .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,26,.15) 0%,rgba(5,8,26,0) 35%,rgba(5,8,26,.25) 62%,rgba(5,8,26,.85) 100%)}
+#gl{position:absolute;inset:0}
+#cards{position:absolute;inset:0;pointer-events:none}
+#sombra{position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(5,8,26,.88) 82%,rgba(5,8,26,.95) 100%)}
+.card{position:absolute;display:flex;align-items:center;gap:18px;padding:22px 30px;border-radius:30px;background:rgba(255,255,255,.97);color:#0b1330;box-shadow:0 34px 60px -18px rgba(0,0,0,.65),0 0 0 2px rgba(255,255,255,.5);white-space:nowrap;font-weight:700;font-size:40px}
+.card.azul{background:var(--primaria);color:#fff}.card .big{color:var(--primaria)}.card.azul .big{color:#fff}
+.card small{display:block;font-weight:500;font-size:27px;opacity:.75}
+.card .dot{width:24px;height:24px;border-radius:50%;flex:none}
+.card .big{font-family:U;font-weight:800;font-size:54px;letter-spacing:-.03em}
+#leg{position:absolute;left:60px;right:60px;text-align:center;font-family:U;font-weight:800;letter-spacing:-.03em;line-height:1.02}
+#leg span{display:inline-block;margin:0 .12em;transform-origin:50% 70%;text-shadow:0 6px 24px rgba(0,0,0,.55),0 2px 4px rgba(0,0,0,.4)}
+#leg span.k{color:var(--destaque)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+#barra{position:absolute;left:0;top:0;height:10px;background:linear-gradient(90deg,var(--destaque),var(--acento));z-index:20}
+#selo{position:absolute;left:50%;top:150px;transform:translateX(-50%);display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.95);border-radius:99px;padding:10px 24px 10px 10px;z-index:20}
+#selo img{height:42px}#selo b{font-family:U;font-weight:700;color:var(--escura);font-size:26px;letter-spacing:-.02em}
+#fim{position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:250px;text-align:center;background:radial-gradient(60% 45% at 50% 55%,var(--clara) 0%,var(--escura) 50%,var(--fundo) 100%)}
+#fim .logo{width:210px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+#fim h2{font-family:U;font-weight:900;font-size:96px;letter-spacing:-.04em;margin-top:30px}
+#fim p{font-size:44px;opacity:.9;margin-top:18px;max-width:880px}
+#fim .trio{width:800px;margin-top:34px}
+#fim .url{margin-top:30px;padding:28px 52px;border-radius:99px;background:#fff;color:var(--primaria);font-family:U;font-weight:800;font-size:44px;position:relative;overflow:hidden}
+#fim .url i{position:absolute;top:0;bottom:0;width:120px;background:linear-gradient(90deg,transparent,rgba(36,67,200,.25),transparent);transform:skewX(-20deg)}
+</style></head><body>
+<div id="marca-bg"></div><div id="grade"></div><div id="orbes"></div>
+<div id="broll"><img id="bimg"><div class="tint"></div></div>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div id="sombra"></div><div id="cards"></div>
+<div id="leg"></div>
+<div id="fim"><img class="logo" id="fimlogo" src="/marca/logo.png"><h2 id="fimnome">Marca</h2><p id="fimp"></p><img class="trio" id="trio"><span class="url"><span id="fimurl">site.com.br</span><i></i></span></div>
+<div id="flash"></div><div id="barra"></div>
+<div id="selo"><img id="selologo" src="/marca/logo.png"><b id="selonome">marca</b></div>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const D = await (await fetch(new URLSearchParams(location.search).get('tl'))).json();
+const $ = (id) => document.getElementById(id);
+const cl = (x) => Math.max(0, Math.min(1, x));
+const eio = (x) => { x = cl(x); return x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x+2, 3)/2; };
+const eo = (x) => 1 - Math.pow(1 - cl(x), 3);
+const back = (x) => { x = cl(x); const c = 1.9; return 1 + (c+1)*Math.pow(x-1,3) + c*Math.pow(x-1,2); };
+$('fimp').textContent = D.fim.linha; if (D.fim.trio) $('trio').src = D.fim.trio; else $('trio').remove();
+// identidade: "marca" no roteiro (nome, url, logo, cores). Sem ela, fica o padrão.
+const M = D.marca || {};
+for (const [k, v] of Object.entries(M.cores || {})) document.documentElement.style.setProperty('--' + k, v);
+if (M.logo) { $('fimlogo').src = M.logo; $('selologo').src = M.logo; }
+$('fimnome').textContent = M.nome || ''; $('selonome').textContent = (M.selo || M.nome || '').toLowerCase();
+$('fimurl').textContent = M.url || ''; if (!M.url) $('fimurl').parentElement.remove();
+
+// orbes coloridos (macros)
+const OR = [['#e2583b',90,140,560],['#f0b232',60,900,760],['#8fb34a',70,160,1320],['#3aa9dc',50,880,1240],['#f0b232',36,300,420]];
+$('orbes').innerHTML = OR.map(([c,s,x,y],i)=>`<span class="orbe" id="o${i}" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px;background:radial-gradient(circle at 32% 30%,#fff8,${c} 45%,#0006)"></span>`).join('');
+
+// ---------- three.js: celular com tela viva
+const renderer = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
+const scene = new THREE.Scene();
+scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(28, 1080/1920, 0.1, 60);
+const key = new THREE.DirectionalLight(0xffffff, 1.7); key.position.set(2, 3, 4); scene.add(key);
+const rim = new THREE.DirectionalLight(0x7fa0ff, 2.2); rim.position.set(-3, 1, -2); scene.add(rim);
+const rim2 = new THREE.DirectionalLight(0xf7c64a, 1.0); rim2.position.set(3, -2, -2); scene.add(rim2);
+scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+const TW = 720, TH = 1560;
+const tcan = document.createElement('canvas'); tcan.width = TW; tcan.height = TH;
+const tctx = tcan.getContext('2d');
+const ttex = new THREE.CanvasTexture(tcan); ttex.colorSpace = THREE.SRGBColorSpace; ttex.anisotropy = 8;
+const mask = document.createElement('canvas'); mask.width = TW; mask.height = TH;
+{ const g = mask.getContext('2d'); g.fillStyle = '#000'; g.fillRect(0,0,TW,TH); g.fillStyle = '#fff'; g.beginPath(); g.roundRect(0,0,TW,TH,84); g.fill(); }
+const phone = new THREE.Group();
+phone.add(new THREE.Mesh(new RoundedBoxGeometry(0.78, 1.64, 0.09, 8, 0.1), new THREE.MeshPhysicalMaterial({ color: 0x15171c, metalness: 0.7, roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.1 })));
+phone.add(new THREE.Mesh(new RoundedBoxGeometry(0.8, 1.66, 0.075, 8, 0.11), new THREE.MeshPhysicalMaterial({ color: 0xb8c0d4, metalness: 1, roughness: 0.16 })));
+const tela = new THREE.Mesh(new THREE.PlaneGeometry(0.72, 1.56), new THREE.MeshBasicMaterial({ map: ttex, alphaMap: new THREE.CanvasTexture(mask), transparent: true, toneMapped: false }));
+tela.position.z = 0.0466; phone.add(tela);
+const ilha = new THREE.Mesh(new RoundedBoxGeometry(0.12, 0.034, 0.004, 4, 0.016), new THREE.MeshBasicMaterial({ color: 0x05060a }));
+ilha.position.set(0, 0.742, 0.049); phone.add(ilha);
+const holder = new THREE.Group(); holder.position.y = 0.1; holder.add(phone); scene.add(holder);
+
+const imgs = {};
+const carrega = (src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = src; });
+for (const c of D.cenas) if (c.tela && !imgs[c.tela]) imgs[c.tela] = await carrega('/estados/' + c.tela + '.png');
+const nav = await carrega('/estados/nav.png');
+
+function desenhaTela(c, p) {
+  const im = imgs[c.tela];
+  const s = TW / im.width; // escala da imagem para a textura
+  const y = (c.y0 + (c.y1 - c.y0) * eio(p)) * 3; // px da imagem (3x)
+  tctx.fillStyle = '#d3def4'; tctx.fillRect(0,0,TW,TH);
+  tctx.drawImage(im, 0, y, im.width, TH / s, 0, 0, TW, TH);
+  if (im.height > 2600) { const ns = TW / nav.width; tctx.drawImage(nav, 0, TH - nav.height * ns, TW, nav.height * ns); }
+  if (c.scan && p < c.scan) { p = p / c.scan; // luz de leitura da IA
+    const sy = ((p * 1.6) % 1) * TH; const g = tctx.createLinearGradient(0, sy - 160, 0, sy);
+    g.addColorStop(0, 'rgba(79,116,255,0)'); g.addColorStop(1, 'rgba(120,150,255,.55)');
+    tctx.fillStyle = g; tctx.fillRect(0, sy - 160, TW, 160); tctx.fillStyle = 'rgba(255,255,255,.9)'; tctx.fillRect(0, sy - 3, TW, 3);
+  }
+  ttex.needsUpdate = true;
+}
+
+// presets de câmera: [posição do celular x,y,z, rotação x,y,z] no início e no fim da cena
+const CAM = {
+  entra:  [[0,-2.6,0, 0.5,-1.4,0.2], [0,0.02,0, 0.06,-0.28,0.02]],
+  orbita: [[0,0,0, 0.05,0.45,0], [0,0.02,0, 0.05,-0.3,0]],
+  close:  [[0,-0.15,1.5, 0.02,-0.1,0], [0,-0.35,1.9, 0.0,0.06,0]],
+  closebaixo: [[0,0.3,1.5, 0.02,0.1,0], [0,0.5,1.9, 0.0,-0.06,0]],
+  zoomtopo:[[0,0,0.4, 0.04,-0.2,0], [0,-0.55,2.1, 0.02,0.0,0]],
+  lado:   [[0.25,0,0, 0.05,-0.55,0.03], [0.15,0.02,0.4, 0.05,-0.2,0.01]],
+  sai:    [[0,0.02,0, 0.06,-0.28,0.02], [0,2.8,0, -0.4,0.8,-0.2]],
+};
+camera.position.set(0, 0, 5.3); camera.lookAt(0, 0, 0);
+
+function cenaEm(t) { for (let i = 0; i < D.cenas.length; i++) if (t < D.cenas[i].b) return i; return D.cenas.length - 1; }
+
+// legendas: blocos de até 3 palavras
+const blocos = []; { let cur = [];
+  D.palavras.forEach((w, i) => { cur.push(w); const prox = D.palavras[i+1]; const gap = prox ? prox.a - (w.a + w.d) : 1;
+    if (cur.length >= (D.maxpal || 3) || /[.?!,:]$/.test(w.w) || gap > 0.22) { blocos.push(cur); cur = []; } }); if (cur.length) blocos.push(cur); }
+const KEY = new Set((D.chaves || []).map((x) => x.toLowerCase()));
+
+window.seek = async function (t) {
+  $('barra').style.width = (100 * t / D.total) + '%';
+  OR.forEach((o, i) => { $('o'+i).style.transform = `translate(${Math.sin(t*0.8+i)*18}px,${Math.cos(t*0.7+i*1.7)*26}px)`; });
+  const i = cenaEm(t), c = D.cenas[i], p = cl((t - c.a) / (c.b - c.a));
+  const ent = cl((t - c.a) / 0.28); // entrada (transição)
+  // ----- b-roll
+  const br = $('broll'), bimg = $('bimg');
+  if (c.tipo === 'broll') {
+    br.style.display = 'block';
+    const f = Math.min(c.n - 1, Math.floor((t - c.a) * 30));
+    const src = `/broll/frames/${c.clip}/${String(f + 1).padStart(4, '0')}.jpg`;
+    if (bimg.getAttribute('src') !== src) { bimg.src = src; await bimg.decode().catch(() => {}); }
+    const z = (c.zoom || [1.06, 1.16]); const zz = z[0] + (z[1] - z[0]) * p;
+    const punch = 1 + 0.12 * (1 - eo(ent)); // soco de zoom na entrada
+    const wx = (1 - eo(ent)) * (i % 2 ? -1 : 1) * 260; // chicote lateral
+    bimg.style.transform = `translateX(${wx}px) scale(${zz * punch})`;
+    bimg.style.transformOrigin = c.origem || '50% 50%';
+    bimg.style.filter = `blur(${(1 - eo(ent)) * 18}px) saturate(1.08) contrast(1.06)`;
+  } else br.style.display = 'none';
+  // ----- celular
+  const fim = D.fim.a;
+  if (c.tipo === 'phone') {
+    $('gl').style.display = 'block';
+    const pr = CAM[c.cam || 'orbita'];
+    const q = c.cam === 'entra' ? back(p * 1.6) : eio(p);
+    const P = pr[0].map((v, k) => v + (pr[1][k] - v) * q);
+    phone.position.set(P[0], P[1] + Math.sin(t * 1.2) * 0.015, P[2]);
+    phone.rotation.set(P[3], P[4] + Math.sin(t * 0.7) * 0.03, P[5]);
+    desenhaTela(c, p);
+    renderer.render(scene, camera);
+  } else { $('gl').style.display = 'none'; }
+  // ----- cartões flutuantes
+  let html = '';
+  if (c.cards) for (const k of c.cards) {
+    const ta = c.a + (k.t || 0) * (c.b - c.a); const pp = (t - ta) / 0.45;
+    if (pp <= 0) continue;
+    const s = back(pp), fl = Math.sin(t * 1.5 + (k.y || 0)) * 8;
+    html += `<div class="card ${k.azul ? 'azul' : ''}" style="left:${k.x}px;top:${k.y}px;opacity:${cl(pp*3)};transform:translateY(${fl}px) scale(${s}) rotate(${k.r || 0}deg)">${k.cor ? `<span class="dot" style="background:${k.cor}"></span>` : ''}<span>${k.big ? `<span class="big">${k.big}</span> ` : ''}${k.txt || ''}${k.sub ? `<small>${k.sub}</small>` : ''}</span></div>`;
+  }
+  $('cards').innerHTML = html;
+  for (const el of $('cards').children) { const r = el.offsetLeft + el.offsetWidth; if (r > 1044) el.style.left = (1044 - el.offsetWidth) + 'px'; } $('sombra').style.display = c.tipo === 'phone' ? 'block' : 'none';
+  // ----- legenda animada
+  let lg = '';
+  if (t < fim) for (const bl of blocos) {
+    const a0 = bl[0].a, a1 = bl[bl.length-1].a + bl[bl.length-1].d;
+    const nx = blocos[blocos.indexOf(bl) + 1]; const fimB = Math.min(nx ? nx[0].a - 0.02 : 1e9, a1 + 0.7);
+    if (t >= a0 - 0.04 && t < fimB) {
+      lg = bl.map((w) => { const pw = (t - w.a) / 0.22; const s = pw < 0 ? 0 : back(pw);
+        const kk = KEY.has(w.w.toLowerCase().replace(/[^\p{L}\d]/gu, '')) ? 'k' : '';
+        return `<span class="${kk}" style="opacity:${pw < 0 ? 0 : 1};transform:scale(${s}) translateY(${(1-eo(pw))*30}px)">${w.w}</span>`; }).join(' ');
+      break;
+    }
+  }
+  const leg = $('leg'); leg.innerHTML = lg;
+  const pos = c.legY || ({ phone: 1545, marca: 700, broll: 1150 })[c.tipo];
+  leg.style.top = pos + 'px'; leg.style.fontSize = (c.legS || ({ phone: 68, marca: 128, broll: 96 })[c.tipo]) + 'px';
+  // ----- flash nos cortes marcados
+  let fl = c.flash ? Math.max(0, 1 - (t - c.a) / 0.12) : 0;
+  for (const w of D.palavras) if ((D.flashPal || []).includes(w.w.toLowerCase().replace(/[^\p{L}]/gu, '')) && t >= w.a && t < w.a + 0.14) fl = Math.max(fl, 1 - (t - w.a) / 0.14); $('flash').style.opacity = fl * 0.85;
+  // ----- final
+  const fo = eo((t - fim) / 0.4); const F = $('fim'); F.style.opacity = fo;
+  F.querySelector('.logo').style.transform = `scale(${back((t - fim - 0.05) / 0.55)}) rotate(${(1 - eo((t - fim)/0.7)) * -30}deg)`;
+  F.querySelector('.trio').style.transform = `translateY(${(1 - eo((t - fim - 0.25)/0.6)) * 300}px)`;
+  F.querySelector('.url i').style.left = (((t - fim) * 520) % 1400 - 200) + 'px';
+  $('selo').style.opacity = t < D.cenas[0].b || t >= fim ? 0 : 1;
+  return true;
+};
+window.pronto = true;
+</script></body></html>

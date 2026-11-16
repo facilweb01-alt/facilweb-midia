@@ -1,0 +1,95 @@
+{
+ "nome": "reel-exemplo-quero-testar",
+ "voz": "r1/voz.json",
+ "wav": "r1/voz.wav",
+ "musica": "B",
+ "maxpal": 4,
+ "marca": {
+  "nome": "Nutriforma",
+  "selo": "nutriforma",
+  "url": "nutriforma.com.br/site",
+  "logo": "/marca/logo.png",
+  "cores": {
+   "fundo": "#05081a",
+   "primaria": "#2443c8",
+   "escura": "#14267a",
+   "clara": "#3a62f0",
+   "destaque": "#f7c64a",
+   "acento": "#e2583b"
+  }
+ },
+ "chaves": [
+  "testar",
+  "whatsapp",
+  "minuto",
+  "foto",
+  "calorias"
+ ],
+ "flashPal": [
+  "minuto"
+ ],
+ "cenas": [
+  {
+   "tipo": "broll",
+   "clip": "parede",
+   "ini": 1.0,
+   "zoom": [
+    1.12,
+    1.03
+   ]
+  },
+  {
+   "tipo": "broll",
+   "clip": "rolando",
+   "ini": 3.0,
+   "zoom": [
+    1.0,
+    1.1
+   ]
+  },
+  {
+   "tipo": "phone",
+   "tela": "p-foto-enviada",
+   "y0": 0,
+   "y1": 160,
+   "cam": "entra",
+   "cards": [
+    {
+     "x": 40,
+     "y": 430,
+     "t": 0.2,
+     "txt": "Conta criada",
+     "sub": "24 h grátis, sem cartão",
+     "cor": "#25a35a",
+     "r": -3
+    }
+   ]
+  },
+  {
+   "tipo": "phone",
+   "tela": "whatsapp",
+   "y0": 0,
+   "y1": 220,
+   "cam": "orbita",
+   "cards": [
+    {
+     "x": 560,
+     "y": 1180,
+     "t": 0.35,
+     "txt": "kcal",
+     "sub": "e o que falta no dia",
+     "big": "438",
+     "azul": true,
+     "r": 3
+    }
+   ]
+  },
+  {
+   "tipo": "fim"
+  }
+ ],
+ "fim": {
+  "linha": "Seu diário no WhatsApp.",
+  "trio": "/marca/trio.png"
+ }
+}

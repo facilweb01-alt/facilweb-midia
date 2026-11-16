@@ -1,0 +1,11 @@
+{
+  "name": "kit-video-narrado",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reels narrados: b-roll + celular 3D com telas reais + legenda palavra a palavra (three.js em Chromium headless)",
+  "dependencies": {
+    "three": "0.160.0",
+    "@fontsource-variable/unbounded": "5.1.0",
+    "@fontsource-variable/instrument-sans": "5.1.0"
+  }
+}
