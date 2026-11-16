@@ -4,3 +4,5 @@ sistema/criativos3d/cenas_*.json
 sistema/semanas/*/out3d/
 sistema/semanas/*/saida/
 sistema/semanas/*/prancha-*.jpg
+sistema/semanas/*/*/saida/
+sistema/semanas/*/*/prancha-*.jpg

@@ -1,3 +1,14 @@
+ATUALIZAÇÃO 16/11/2026: o Marcelo reprovou as artes 3D e pediu tudo refeito no padrão Fácil Web.
+Versão 2 em v2/ (gerar_v2.py, legendas, roteiro-reel-PENDENTE.txt). Plano de crescimento em Claude Docs:
+https://claude.ai/artifact/ERc2Exq6XAPvE3SG2v64xo
+V2 · STATUS: PENDENTE de aprovação. Calendário v2 (Brasília -> UTC):
+TER 17/11 15:00 (18:00Z) carrossel 6 slides "Você vendeu R$ 20 mil no app? R$ 5.400 viraram comissão" (hook 100) + 3 stories 15:10
+QUI 19/11 15:00 (18:00Z) carrossel 7 slides "Sexta, 20h: pedido picado em 19 conversas" (hook 84) + 3 stories 15:10
+SÁB 21/11 09:30 (12:30Z) carrossel 6 slides "27% por pedido ou R$ 189,90 por mês?" (hook 84) + 3 stories 09:40
+Legendas v2: caption.py PRONTA nas 3; detect.py 80.6 / 80.0 / 91.1 APROVADO.
+Dados do site facilwebdelivery.com.br usados (confirmar com o Marcelo): R$ 189,90/mês, comissão 27% de exemplo, atendente virtual no WhatsApp.
+
+--- versão 1 (reprovada) ---
 SEMANA 16 a 22/11/2026 · STATUS: PENDENTE de aprovação do Marcelo (enviado em 12/11/2026). Nada agendado, nada commitado em pasta de data.
 
 Calendário (horário de Brasília -> UTC)
