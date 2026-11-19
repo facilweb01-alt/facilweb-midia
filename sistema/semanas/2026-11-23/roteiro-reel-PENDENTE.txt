@@ -1,0 +1,11 @@
+REEL (PENDENTE: precisa do vídeo gravado pelo Marcelo) · sugestão para QUA 25/11 15h ou próxima semana
+Tema: abandono de carrinho · 20 a 25 s · gravação de tela do celular + painel (sem narração ou com voz)
+
+0-3 s  Tela do cardápio no celular, carrinho com pizza + refri. Texto na tela: "R$ 74 no carrinho e o cliente sumiu?"
+3-8 s  Dedo sai do app, tela apaga. Texto: "Tocou o telefone. O pedido ficou parado."
+8-14 s Painel Fácil Web > Abandono de carrinho: marcar "Habilitar" e digitar o desconto em %. Texto: "Liga o abandono de carrinho"
+14-20 s Celular recebe o aviso "Os itens do seu carrinho estão esperando por você". Texto: "O sistema avisa o cliente"
+20-25 s Pedido entrando no painel. Encerramento: logo + "Carrinho parado vira pedido" + @facilweb (sem chamada na tela final).
+Acabamento: OpusClip (efeitos sonoros nas viradas), conforme OPERACAO.md.
+Legenda: reaproveitar a de 26/11 com a primeira linha do reel.
+Pendente: o vídeo; confirmar por onde o aviso chega ao cliente (WhatsApp? e-mail?) e depois de quantos minutos.

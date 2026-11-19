@@ -1,0 +1,13 @@
+SEMANA 23 a 29/11/2026 · STATUS: PENDENTE de aprovação do Marcelo (enviado em 19/11/2026 pela tarefa semanal).
+Nada commitado em pasta de data, nada agendado no n8n.
+
+Calendário (Brasília -> UTC)
+TER 24/11 15:00 (18:00Z) CARROSSEL 7 "Black Friday: você dá 20% e o app leva 27%?" (hook 79.5) + 3 stories 15:10/15:12/15:14
+QUI 26/11 15:00 (18:00Z) CARROSSEL 7 "R$ 74 no carrinho e o cliente sumiu?" (abandono de carrinho, hook 78.7) + 3 stories 15:10..
+SEX 27/11 09:30 (12:30Z) 2 STORIES Black Friday (09:30 e 09:32)
+SÁB 28/11 09:30 (12:30Z) CARROSSEL 7 "Black Friday trouxe cliente novo? Sem ponto, ele some em dezembro" (pontos de fidelidade, hook 79.4) + 3 stories 09:40..
+REEL: só roteiro (roteiro-reel-PENDENTE.txt).
+Legendas: caption.py PRONTA nas 3; detect.py 78.8 / 92.0 / 77.1 APROVADO.
+Artes: gerar_semana.py (padrão v3 de 16/11, logo no selo branco em todas as 32 peças). Itens do n8n prontos em agenda-n8n.json.
+Pendências: confirmar que o módulo Posts entrega a arte com o print do cardápio e o link (24/11); por onde chega o aviso do abandono de carrinho (26/11); pontos 1 a cada R$ 20 / R$ 1 por ponto / mínimo 5 são exemplo da tela demo (28/11).
+Métricas: conector da Meta (Pipeboard) no limite semanal em 19/11; sem números novos.
